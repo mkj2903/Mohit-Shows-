@@ -6,9 +6,53 @@
     <title>TV Shows Streaming</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7993259194717520"
+     crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
+    <header>
+        <h1 ><img class="logo">ShowPlay  </h1>
+        <input type="checkbox" id="mobile-icon">
+        <label for="mobile-icon" class="toggle"><span class="hamburger-icon"></span></label>
+        <nav>
+          <ul class="nav-items">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a class="hide-mobile" href="#">Services<span class="arrow">&#x25bc;</span></a>
+              <label for="submenu"> Services<span class="arrow">&#x25bc;</span></label>
+              <input id="submenu" type="checkbox">
+              <ul class="submenu-1">
+                  <li><a href="#">Android Dev</a></li>
+                  <li><a href="#">iOS Dev</a></li>
+                  <li>
+                    <a class="hide-mobile" href="#">Web Dev<span class="arrow">&#x25b6;</span></a>
+                    <label for="submenu-2">Web Dev<span class="arrow">&#x25bc;</span></label>
+                    <input id="submenu-2" type="checkbox">
+                    <ul class="submenu-2">
+                        <li><a href="#">NodeJS</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">Python</a></li>
+                    </ul>
+                  </li>
+              </ul>
+            </li>
+            <li><a href="#">Downloads</a></li>
+            <li>
+              <a class="hide-mobile" href="#">FAQ<span class="arrow">&#x25bc;</span></a>
+              <label for="submenu-3">FAQ<span class="arrow">&#x25bc;</span></label>
+              <input id="submenu-3" type="checkbox">
+                <ul class="submenu-3">
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">iOS</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+      </header>
+    <!--<header class="header">
         <div class="container">
             <h1 class="logo">ShowPlay</h1>
             <nav class="navbar">
@@ -22,7 +66,7 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    </header>-->
 
     <section class="hero">
         <div class="container">
