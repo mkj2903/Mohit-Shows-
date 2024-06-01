@@ -3,63 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV Shows - Shows</title>
+    <title>TV Shows</title>
     <link rel="stylesheet" href="shows.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7993259194717520"
-     crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">TVShows</h1>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shows.html" class="active">Shows</a></li>
-                    <li><a href="categories.html">Categories</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header>
+        <h1>TV Shows</h1>
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="webseries.html">Webseries</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <section class="shows">
-        <div class="container">
-            <h2>Popular TV Shows</h2>
-            <div class="show-card"> <a href="tmkoc.html">
-                <img src="images/1.jpg" alt="Show 1" > 
-                <h3>Tarrak Mehta Ka ulta Chashma</h3></a>
-                <p>Watch Daily Episode Free</p>
+    <main>
+        
+        <div class="shows-gallery">
+            <!-- Repeat this block for each TV show -->
+            <div class="show-item">
+                <img src="images/1.jpg" alt="Show 1" class="show-image">
+                <div class="show-info">
+                    <h2 class="show-title">Tmkoc</h2>
+                    <a href="tmkoc.html">
+                    <button class="channel-button">Watch Now</button></a>
+                </div>
             </div>
-            <div class="show-card"> <a href="baalveer.html">
-                <img src="images/2.jpg" alt="Show 2">
-                <h3>Baalveer</h3>
-            </a>
-                <p>Watch Daily Episode Free</p>
+            <!-- Repeat the block up to desired number of shows -->
+            <div class="show-item">
+                <img src="images/2.jpg" alt="Show 2" class="show-image">
+                <div class="show-info">
+                    <h2 class="show-title">Baalveer S4</h2>
+                    <a href="baalveer.html">
+                    <button class="channel-button">Watch Now</button></a>
+                </div>
             </div>
-            <!-- Add more show cards as needed -->
+            <div class="show-item">
+                <img src="images/3.jpg" alt="Show 2" class="show-image">
+                <div class="show-info">
+                    <h2 class="show-title">The Great Indian Kapil Show</h2>
+                    <a href="kapil.html">
+                    <button class="channel-button">Watch Now</button></a>
+                </div>
+            </div>
+            <!-- Continue repeating for all shows -->
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 TVShows. All rights reserved.</p>
-        </div>
-    </footer>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7993259194717520"
-     crossorigin="anonymous"></script>
-<!-- Square Banner 1 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7993259194717520"
-     data-ad-slot="8083101934"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+    
+    </main>
 </body>
 </html>
