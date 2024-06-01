@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image img {
+    background-image: url(images/1.jpg);
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-image img.active {
+    opacity: 1;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.hero-image {
+    animation: move 10s linear infinite; /* Adjust the duration and timing function as needed */
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .hero-text {
+        width: 80%;
+    }
+}

@@ -3,34 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panchayat</title>
+    <title>Movies</title>
     <link rel="stylesheet" href="movies.css">
 </head>
 <body>
-    <header>
-        <h2>Movies</h2>
-        <nav>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="categories.html">Categories</a></li>
-                <li><a href="shows.html">Shows</a></li>
-            
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Movies</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shows.html">Shows</a>
+                <a href="webseries.html">Webseries</a>
+            </div>
+        </div>
+    </nav>
     <main>
-        <div class="video-gallery">
-            <!-- Repeat this block for each video -->
-        
+        <div class="gallery">
+            <!-- Repeat this block for 20 images -->
+            <div class="image-card">
+                <img src="images/mr and mrs mahi.jpg" alt="Image 1">
+                <h3>Mr and Mrs Mahi Hindi HD in Hindi       (Only Download Available) </h3>
             
-                
-                
-           
-            <!-- Repeat the block up to 20 videos -->
-           
-            <!-- Continue repeating for all videos -->
+                <div class="buttons">
+                    <a href="https://dlupload.com/filedetail/875575427" class="btn">Download</a>
+                    <a href="#" class="btn1">Watch Online</a>
+                </div>
+            </div>
+            <!-- Add more image-card divs here -->
+            <!-- Example for the next image card
+            <div class="image-card">
+                <img src="https://via.placeholder.com/150" alt="Image 2">
+                <h3>Image Title 2</h3>
+                <div class="buttons">
+                    <a href="#" class="btn">Download</a>
+                    <a href="#" class="btn">Watch Online</a>
+                </div>
+            </div> -->
+            <!-- Continue up to 20 images -->
         </div>
     </main>
 </body>
