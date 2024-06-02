@@ -3,233 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV Shows Streaming</title>
+    <title>Baalveer</title>
     <link rel="stylesheet" href="test.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7993259194717520"
-     crossorigin="anonymous"></script>
 </head>
 <body>
-   <!-- <header>
-        <h1 ><img class="logo">ShowPlay  </h1>
-        <input type="checkbox" id="mobile-icon">
-        <label for="mobile-icon" class="toggle"><span class="hamburger-icon"></span></label>
+    <header>
+        <h1>Baalveer</h1>
         <nav>
-          <ul class="nav-items">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a class="hide-mobile" href="#">Services<span class="arrow">&#x25bc;</span></a>
-              <label for="submenu"> Services<span class="arrow">&#x25bc;</span></label>
-              <input id="submenu" type="checkbox">
-              <ul class="submenu-1">
-                  <li><a href="#">Android Dev</a></li>
-                  <li><a href="#">iOS Dev</a></li>
-                  <li>
-                    <a class="hide-mobile" href="#">Web Dev<span class="arrow">&#x25b6;</span></a>
-                    <label for="submenu-2">Web Dev<span class="arrow">&#x25bc;</span></label>
-                    <input id="submenu-2" type="checkbox">
-                    <ul class="submenu-2">
-                        <li><a href="#">NodeJS</a></li>
-                        <li><a href="#">PHP</a></li>
-                        <li><a href="#">Python</a></li>
-                    </ul>
-                  </li>
-              </ul>
-            </li>
-            <li><a href="#">Downloads</a></li>
-            <li>
-              <a class="hide-mobile" href="#">FAQ<span class="arrow">&#x25bc;</span></a>
-              <label for="submenu-3">FAQ<span class="arrow">&#x25bc;</span></label>
-              <input id="submenu-3" type="checkbox">
-                <ul class="submenu-3">
-                    <li><a href="#">Android</a></li>
-                    <li><a href="#">iOS</a></li>
-                </ul>
-            </li>
-            <li><a href="#">About</a></li>
-          </ul>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="shows.html">Shows</a></li>
+            </ul>
         </nav>
-      </header>-->
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">ShowPlay</h1>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-            
-                   <li><a href="categories.html">Categories</a></li>
-                  
-                    <li><a href="shows.html">Shows</a></li>
-                    <li><a href="movies.html">Movies</a></li>
-
-                  
-                </ul>
-            </nav>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for videos...">
+            <button id="searchButton">Search</button>
         </div>
     </header>
+    
+    <main>
+        <div class="video-gallery" id="videoGallery">
+            <!-- Repeat this block for each video -->
+            <div class="video-item">
+                <iframe id="odysee-iframe" style="width:100%; aspect-ratio:16 / 9;" src="https://odysee.com/$/embed/@mkj2903:1/baalveer:2?r=6ZnbraDGq9PvJivWzmusCVyWsgjMZD6y" allowfullscreen></iframe>
+                <div class="video-info">
+                    <h2 class="video-title">Baalveer</h2>
+                    <p class="video-date">May 31, 2024</p>
+                    <a href="https://dlupload.com/filedetail/712698321" class="download-button">Download</a>
+                </div>
+            </div>
 
-    <section class="hero">
-        <div class="container">
-            <div class = "floating-text">
-            <h2>Welcome to ShowPlay</h2>
+
+            <div class="video-item">
+              <iframe id="odysee-iframe" style="width:100%; aspect-ratio:16 / 9;" src="https://odysee.com/$/embed/@mkj2903:1/baalveer:2?r=6ZnbraDGq9PvJivWzmusCVyWsgjMZD6y" allowfullscreen></iframe>
+              <div class="video-info">
+                  <h2 class="video-title">Baalveer EP2</h2>
+                  <p class="video-date">May 31, 2024</p>
+                  <a href="https://dlupload.com/filedetail/712698321" class="download-button">Download</a>
+              </div>
           </div>
-            <p>Stream your favorite TV shows anytime, anywhere.</p>
-        </div>
-    </section>
-
-    <section class="featured">
-        <div class="container">
-            <h2>Featured Shows,Movies & Webseries</h2>
-            <div class="shows-grid">
-              <div class="show"> <a href="today.html" class="a1">
-                <img src="images/today2.jpg"  class="hover-image" alt="Show 2">
-                <h3>Today All Episodes</h3></a>
-            </div>
-                <div class="show"> <a href="tmkoc.html" class ="a1">
-                    <img src="images/1.jpg" class="hover-image">
-                    <h3>Tarrak Mehta Ka ooltha Chashma</h3>
-                </a>
-                </div>
-                <div class="show"> <a href="baalveer.html" class="a1">
-                    <img src="images/2.jpg"  class="hover-image" alt="Show 2">
-                    <h3>Baalveer Season 4</h3></a>
-                </div>
-                <div class="show">
-                  <a href="kapil.html"class ="a1">
-                    <img src="images/3.jpg" class="hover-image" alt="Show 3">
-                    <h3>The Great Kapil Show</h3></a>
-                </div>
-                <div class="show"> <a href="movies.html"class ="a1">
-                    <img src="images/4.crdownload"  class="hover-image" alt="Show 4"> 
-                    <h3>Latest Movies</h3></a>
-                </div>
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7993259194717520"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-6z+f0-v-50+c6"
-     data-ad-client="ca-pub-7993259194717520"
-     data-ad-slot="7476150160"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-                <div class="show"> <a href="webseries.html"class="a1">
-                    <img src="images/web2.png"  class="hover-image" alt="Show 4"> 
-                    <h3>Web Series </h3></a>
-                </div>
-                
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7993259194717520"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-6y+f0-v-50+c6"
-     data-ad-client="ca-pub-7993259194717520"
-     data-ad-slot="7871348942"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7993259194717520"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-6z+f0-v-50+c6"
-     data-ad-client="ca-pub-7993259194717520"
-     data-ad-slot="7476150160"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7993259194717520"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-6y+f0-v-50+c6"
-     data-ad-client="ca-pub-7993259194717520"
-     data-ad-slot="7871348942"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+          <div class="video-item">
+            <iframe id="odysee-iframe" style="width:100%; aspect-ratio:16 / 9;" src="https://odysee.com/$/embed/@mkj2903:1/baalveer:2?r=6ZnbraDGq9PvJivWzmusCVyWsgjMZD6y" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2 class="video-title">Baalveer EP 3</h2>
+                <p class="video-date">May 31, 2024</p>
+                <a href="https://dlupload.com/filedetail/712698321" class="download-button">Download</a>
             </div>
         </div>
-    </section>
+        <div class="video-item">
+          <iframe id="odysee-iframe" style="width:100%; aspect-ratio:16 / 9;" src="https://odysee.com/$/embed/@mkj2903:1/baalveer:2?r=6ZnbraDGq9PvJivWzmusCVyWsgjMZD6y" allowfullscreen></iframe>
+          <div class="video-info">
+              <h2 class="video-title">Baalveer EP 4</h2>
+              <p class="video-date">May 31, 2024</p>
+              <a href="https://dlupload.com/filedetail/712698321" class="download-button">Download</a>
+          </div>
+      </div>
 
-
-  <footer class="footer">
-  	 <div class="container">
-  	 	<div class="row">
-  	 		<div class="footer-col">
-  	 			<h4>Shows</h4>
-  	 			<ul>
-  	 				<li><a href="tmkoc.html">Tarrak Mehta ka Ooltha Chashma</a></li>
-  	 				<li><a href="baalveer.html">Baalveer </a></li>
-  	 				<li><a href="kapil.html">The Great Indian Kapil Show</a></li>
-  	 				<li><a href="#">Wagle Ki Duniya</a></li>
-  	 			</ul>
-  	 		</div>
-  	 		<div class="footer-col">
-  	 			<h4>Movies</h4>
-  	 			<ul>
-  	 				<li><a href="#">Hum Do Humare Do</a></li>
-  	 				<li><a href="#">Golmaal</a></li>
-  	 				<li><a href="#">Jawan</a></li>
-  	 				<li><a href="#">Pathan</a></li>
-  	 				<li><a href="#">Varisu</a></li>
-  	 			</ul>
-  	 		</div>
-  	 		<div class="footer-col">
-  	 			<h4>Web Series</h4>
-  	 			<ul>
-  	 				<li><a href="panchyat.html">Panchayat S3</a></li>
-  	 				<li><a href="#">Bahubali </a></li>
-  	 				<li><a href="#">Family Man</a></li>
-  	 				<li><a href="#">Nam Ni Yad</a></li>
-  	 			</ul>
-  	 		</div>
-         <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="about.html">About Us </a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="#">Sponser</a></li>
-            <li><a href="https://t.me/sonysabshowslatest">Telegram</a></li>
-          </ul>
+            <!-- Repeat for other videos -->
         </div>
-        <div class="footer-col">
-          <h4>Special things Just for You</h4>
-          <ul>
-            <li><a href="request.html">Request Your favorite Movies and Shows</a></li>
-          </ul>
-        </div>
-  	 		<div class="footer-col">
-  	 			<h4>Follow us</h4>
-  	 			<div class="social-links">
-  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
-  	 				<a href="https://t.me/sonysabshowslatest"><i class="fab fa-telegram"></i></a>
-  	 				<a href="#"><i class="fab fa-instagram"></i></a>
-  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
-  	 			</div>
-  	 		</div>
-  	 	</div>
-  	 </div>
-  </footer>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7993259194717520"
-  crossorigin="anonymous"></script>
-<!-- Square Banner 1 -->
-<ins class="adsbygoogle"
-  style="display:block"
-  data-ad-client="ca-pub-7993259194717520"
-  data-ad-slot="8083101934"
-  data-ad-format="auto"
-  data-full-width-responsive="true"></ins>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+    </main>
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '6776d61603e3b474338b4996d79df74e',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//rancidmorsel.com/6776d61603e3b474338b4996d79df74e/invoke.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>

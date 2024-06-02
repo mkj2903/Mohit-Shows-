@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks</title>
+    <link rel="stylesheet" href="baalveer.css">
+</head>
+<body>
+    <header>
+        <h1>Bookmarked Videos</h1>
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="shows.html">Shows</a></li>
+                <li><a href="bookmarks.html">Bookmarks</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="video-gallery" id="bookmarkGallery">
+            <!-- Bookmarked videos will be displayed here -->
+        </div>
+    </main>
+    <script src="search.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const bookmarkGallery = document.getElementById('bookmarkGallery');
+            const bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+
+            if (bookmarks.length === 0) {
+                bookmarkGallery.innerHTML = '<p>No bookmarks yet.</p>';
+            } else {
+                bookmarks.forEach(id => {
+                    const videoItem = document.getElementById(id);
+                    bookmarkGallery.appendChild(videoItem.cloneNode(true));
+                });
+            }
+        });
+    </script>
+</body>
+</html>
