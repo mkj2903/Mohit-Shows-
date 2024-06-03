@@ -119,6 +119,10 @@ body {
     background-color: #28a745;
     color: white;
 }
+.download-btn:hover {
+background-color: black;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

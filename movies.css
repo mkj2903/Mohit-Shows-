@@ -22,7 +22,9 @@ nav {
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  
+    color: rgb(255, 225, 0);
+  
 }
 
 .nav-links a {
@@ -41,12 +43,14 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  
 }
 
 .image-card {
   background-color: #f9f9f9;
+  background-image: url(images/grad2.jpg);
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 20px;
   overflow: hidden;
   text-align: center;
   width: calc(25% - 1rem); /* For desktop */
@@ -61,6 +65,7 @@ nav {
 .image-card h3 {
   margin: 0.5rem 0;
   font-size: 1.2rem;
+  color: #ddd;
 }
 
 .buttons {
@@ -77,13 +82,13 @@ nav {
   border-radius: 5px;
   transition: background-color 0.3s;
 }
-  .btn:hover {
-    background-color: #0056b3;
-  }
-  
+
+.btn:hover {
+  background-color: #0056b3;
+}
 
 .btn1 {
-  background-color: red;
+  background-color: #4000ff;
   color: white;
   padding: 0.5rem 1rem;
   text-decoration: none;
@@ -92,18 +97,184 @@ nav {
 }
 
 .btn1:hover {
+  background-color: #0ad10a;
+}
+
+.speak-btn{
+  background-color: #007BFF;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+
+}
+
+.speak-btn:hover {
   background-color: #0056b3;
 }
 
-/* Responsive Styles */
+
+/* Adjustments for responsiveness */
 @media (max-width: 768px) {
   .image-card {
-      width: calc(50% - 1rem); /* For tablets */
+    width: calc(50% - 1rem); /* For tablets */
   }
 }
 
 @media (max-width: 480px) {
   .image-card {
-      width: calc(100% - 1rem); /* For mobile */
+    width: calc(100% - 1rem); /* For mobile */
   }
 }
+
+/* CSS for filter options */
+.filter-options {
+  margin-bottom: 1rem;
+}
+
+.filter-options label {
+  margin-right: 0.5rem;
+}
+
+.filter-options select {
+  padding: 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .filter-options label,
+  .filter-options select {
+    width: 48%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+
+/* Your existing CSS styles */
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-button {
+  margin-left: 1rem;
+}
+
+.back-button button {
+  background-color: #007BFF;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button button:hover {
+  background-color: #0056b3;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .back-button {
+      order: -1;
+  }
+
+  .nav-links {
+      display: none;
+  }
+
+  .nav-container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .nav-links a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: white;
+      text-decoration: none;
+  }
+
+  .nav-links a:hover {
+      background-color: #555;
+  }
+
+  .nav-links.active {
+      display: block;
+  }
+
+  .logo {
+      margin-bottom: 1rem;
+  }
+
+  .filter-options {
+      flex-direction: column;
+  }
+}
+
+/* Your existing CSS styles */
+
+.filter-options {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.filter-options label {
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.filter-options select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+.filter-options button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-options button:hover {
+  background-color: #0056b3;
+  /*background: linear-gradient(to right, #007bff, #00bfff);*/
+
+}
+
+#apply-filter{
+  background-color: rgb(31, 246, 31);
+}
+
+#clear-filter{
+  background-color: rgb(11, 0, 128);
+
+}
+#clear-filter:hover{
+    background: linear-gradient(to right, #007bff, #00bfff);
+
+}
+#apply-filter:hover{
+  background: linear-gradient(to right, #ff8000, #088db9);
+
+}
+
+
