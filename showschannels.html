@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shows</title>
+    <link rel="stylesheet" href="showschannels.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="back-btn">
+                <button class="back-button" onclick="history.back()">Back</button>
+
+            </div>
+    
+            <div class="logo">Shows</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="webseries.html">WebSeries</a></li>
+
+                
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="channels">
+            <h1>Our TV Shows Channels</h1>
+            <div class="channels-grid">
+                <!-- Repeat this block for 30 channels -->
+                <div class="channel">
+                    <a href="sabshows.html">
+                    <img src="Images/Sony_Sab_new.png" alt="Sony Sab">
+                    <h2>🟢 Sony Sab Shows</h2></a>
+                </div>
+                <div class="channel">
+                    <a href="baalveer.html">
+                    <img src="Images/Sony_LIV.png" alt="Sony Liv">
+                    <h2>🟢 Sony Liv Shows</h2></a>
+                </div>
+                <div class="channel">
+                    <a href="kapil.html">
+                    <img src="Images/Netflix_logo.png" alt="Netflix">
+                    <h2>🟢Netlix </h2></a>
+                </div>
+                
+                <div class="channel">
+                    <img src="Images/Zee-TV-Logo.png" alt="Zee Tv">
+                    <h2>Coming Soon</h2>
+                </div>
+                <div class="channel">
+                    <img src="Images/starplus.jpg" alt="Star Plus">
+                    <h2>Coming Soon</h2>
+                </div>
+                <div class="channel">
+                    <img src="Images/And_TV_logo.png" alt="And Tv">
+                    <h2>Coming Soon</h2>
+                </div>
+                
+
+                
+                
+                <!-- Add more channels as needed -->
+            </div>
+        </section>
+    </main>
+    <script>
+
+        const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+
+burger.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-active');
+
+    // Burger Animation
+    burger.classList.toggle('toggle');
+});
+// JavaScript for back button
+    function goBack() {
+        window.history.back();
+    }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoon Channels</title>
+    <link rel="stylesheet" href="cartoonchannel.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="back-btn">
+                <button class="back-button" onclick="history.back()">Back</button>
+
+            </div>
+    
+            <div class="logo">Cartoon Shows </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="webseries.html">Webseries</a></li>
+                <li><a href="showschannels.html">Shows</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="channels">
+            <h1>Our TV Cartoons Shows Channels</h1>
+            <div class="channels-grid">
+                <!-- Repeat this block for 30 channels -->
+                <div class="channel">
+                    <a href="mphome.html">
+                    <img src="Images/motupatluchannel.jpeg" alt="Motu Patlu">
+                    <h2>🟢 Motu Patlu</h2></a>
+                </div>
+                <div class="channel">
+                    <a href="">
+                    <img src="Images/dora.jpg" alt="Doreamon">
+                    <h2>Coming Soon</h2></a>
+                </div>
+                <div class="channel">
+                    <a href="">
+                    <img src="Images/shinchan.avif" alt="shinchan">
+                    <h2>Coming Soon</h2></a>
+                </div>
+                
+
+
+                
+                
+                <!-- Add more channels as needed -->
+            </div>
+        </section>
+    </main>
+    <script>
+
+        const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+
+burger.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-active');
+
+    // Burger Animation
+    burger.classList.toggle('toggle');
+});
+// JavaScript for back button
+    function goBack() {
+        window.history.back();
+    }
+    
+    </script>
+</body>
+</html>

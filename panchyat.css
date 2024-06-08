@@ -154,4 +154,51 @@
       width: 100%;
     }
   }
+
+  /* Styles for the back button */
+
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for the back button */
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+
+}
+
+.back-button i {
+  margin-right: 10px;
+}
+
+/* Styles for the container */
+.container {
+  position: relative;
+}
+
+/* Adjustments for mobile screens */
+@media screen and (max-width: 768px) {
+  .back-button {
+      top: 35px;
+      left: 10px;
+  color: #ff0026;
+  }
+}
+
   

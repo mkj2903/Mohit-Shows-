@@ -3,49 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebSeries</title>
+    <title>Webseries</title>
     <link rel="stylesheet" href="webseries.css">
-    <script type='text/javascript' src='//rancidmorsel.com/24/f7/5e/24f75e4d76613263e672f6e1647ca9c4.js'></script>
 </head>
 <body>
     <header>
-        <h1>WebSeries</h1>
+
+    <div class="container">
+        <!-- Back Button -->
+        <button class="back-button" onclick="history.back()">Back</button>
+
+
+        <h2>Webseries</h2>
         <nav>
-            <ul>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="categories.html">Categories</a></li>
                 <li><a href="movies.html">Movies</a></li>
-                <li><a href="shows.html">Shows</a></li>
-                
             </ul>
         </nav>
-    </header>
-
-    <main>
-        <section class="gallery">
-            
-            <!-- Repeat similar blocks for each show -->
-            <div class="show-item">
-                <a href="panchyat.html">
-                <img src="images/panchayat.jpg" alt="Show 2">
-                <div class="show-details">
-                    <h3>Panchayat Season 3</h3></a>
-                    <p>Release Date: 31 May, 2024</p>
-                </div>
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for shows...">
+                <button onclick="searchShows()">Search</button>
             </div>
-            <div class="show-item">
-                <img src="images/coming soon.avif" alt="Show 2">
-                <div class="show-details">
-                    <h3>Upcoming Webseries</h3>
-                    <p>Release Date: upcoming</p>
-                </div>
-            </div>
-            <!-- ... more show items up to 20 ... -->
         </section>
+    </header>
+    <main>
+        <div class="video-gallery">
+            <!-- Repeat this block for each video -->
+            <div class="video-item">
+                <h1 class="video-title">Panchayat Season 3</h1>
+                <div class="video1">
+                </div>
+                <div class="video-info">
+                    <a href="panchyat.html"  class="watch-button">Watch</a>
+                </div>
+            </div>
+
+            
+            <!-- Repeat the block up to 20 videos -->
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 TV Shows Gallery. All rights reserved.</p>
-    </footer>
+    <script>
+        
+       
+        function searchShows() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var videoItems = document.querySelectorAll('.video-item');
+
+            videoItems.forEach(function(item) {
+                var title = item.querySelector('.video-title').innerText.toLowerCase();
+                if (title.includes(input)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        
+    
+    // JavaScript for back button
+    function goBack() {
+        window.history.back();
+    }
+    </script>
 </body>
 </html>

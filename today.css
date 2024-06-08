@@ -148,3 +148,17 @@ background-color: black;
         margin-bottom: 0.5rem;
     }
 }
+/* Styles for back button */
+.back-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #555;
+}

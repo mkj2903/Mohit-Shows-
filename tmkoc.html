@@ -3,64 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tmkocr</title>
+    <title>TMKOC</title>
     <link rel="stylesheet" href="tmkoc.css">
-    <script type='text/javascript' src='//rancidmorsel.com/24/f7/5e/24f75e4d76613263e672f6e1647ca9c4.js'></script>
 </head>
 <body>
     <header>
-        <h1>Tmkoc</h1>
+
+    <div class="container">
+        <!-- Back Button -->
+        <button class="back-button" onclick="history.back()">Back</button>
+
+
+        <h2>Tarrak Mehta Ka Ooltha Chashma</h2>
         <nav>
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="categories.html">Categories</a></li>
-                <li><a href="shows.html">Shows</a></li>
-            
+                <li><a href="showschannels.html">Shows Channels</a></li>
             </ul>
         </nav>
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for shows...">
+                <button onclick="searchShows()">Search</button>
+            </div>
+        </section>
     </header>
     <main>
         <div class="video-gallery">
             <!-- Repeat this block for each video -->
-        
             <div class="video-item">
-                
-                <iframe id="odysee-iframe" style="width:100%; aspect-ratio:16 / 9;" src="https://odysee.com/$/embed/@mkj2903:1/Taarak_Mehta_Ka_Ooltah_Chashmah_Season_41_Episode_4099_Anjali_Ka:b?r=6ZnbraDGq9PvJivWzmusCVyWsgjMZD6y" allowfullscreen></iframe>
+                <h1 class="video-title">TMKOC Ep 1 </h1>
 
+                <div class="video">
+                    <iframe id="video1" style="width:100%; aspect-ratio:16 / 9;" src="https://odysee.com/$/embed/@mkj2903:1/Taarak_Mehta_Ka_Ooltah_Chashmah_Season_41_Episode_4099_Anjali_Ka:b?r=6ZnbraDGq9PvJivWzmusCVyWsgjMZD6y" allowfullscreen></iframe>
+
+                    <button class="play-button" onclick="playVideo('video1')">▶</button>
+                </div>
                 <div class="video-info">
-                    <h2 class="video-title">Tmkoc</h2>
-                    <p class="video-date">May 31, 2024</p>
-                    <a href="https://dlupload.com/filedetail/1989033823" class="download-button">Download</a>
+                
+                    <a href="javascript:void(0);" onclick="playVideo('video1');" class="download-button">Watch</a>
+
+                    <select id="quality-select" onchange="changeVideoQuality(this.value)">
+                        <option value="" disabled selected >Video Quality</option>
+                        <option  value="low">360p</option>
+                        <option  value="medium">540p</option>
+                        <option  value="high">720p</option>
+                    </select>
+                    <a href="" download="Netflix_Kapil_Show_Ep_1.mp4" class="download-button">Download</a>
                 </div>
             </div>
             <div class="video-item">
-                
-                
-                <iframe id="odysee-iframe" style="width:100%; aspect-ratio:16 / 9;" src="https://odysee.com/$/embed/@mkj2903:1/Taarak_Mehta_Ka_Ooltah_Chashmah_Season_41_Episode_4100_Abdul_Ki:5?r=6ZnbraDGq9PvJivWzmusCVyWsgjMZD6y" allowfullscreen></iframe>
-                <div class="video-info">
-                    <h2 class="video-title">Tmkoc</h2>
-                    <p class="video-date">June 1, 2024</p>
-                    <a href="https://dlupload.com/filedetail/1989033823" class="download-button">Download</a>
+                <h1 class="video-title">TMKOC Ep 2 </h1>
+
+                <div class="video">
+                    <iframe id="video2" style="width:100%; aspect-ratio:16 / 9;" src="https://odysee.com/$/embed/@mkj2903:1/Taarak_Mehta_Ka_Ooltah_Chashmah_Season_41_Episode_4099_Anjali_Ka:b?r=6ZnbraDGq9PvJivWzmusCVyWsgjMZD6y" allowfullscreen></iframe>
+
+                    <button class="play-button" onclick="playVideo('video2')">▶</button>
                 </div>
-            </div>
-            <div class="video-item">
-                
-                
                 <div class="video-info">
-                    <h2 class="video-title">Tmkoc</h2>
-                    <p class="video-date">June 2, 2024</p>
-                    <a href="" class="download-button">Download</a>
+                
+                    <a href="javascript:void(0);" onclick="playVideo('video2');" class="download-button">Watch</a>
+
+                    <select id="quality-select" onchange="changeVideoQuality(this.value)">
+                        <option value="" disabled selected >Video Quality</option>
+                        <option  value="low">360p</option>
+                        <option  value="medium">540p</option>
+                        <option  value="high">720p</option>
+                    </select>
+                    <a href="" download="Netflix_Kapil_Show_Ep_2.mp4" class="download-button">Download</a>
                 </div>
             </div>
             
             <!-- Repeat the block up to 20 videos -->
-           
-            <!-- Continue repeating for all videos -->
+        </div>
+    </main>
+
+    <script>
+        
+        function playVideo(videoId) {
+            var iframe = document.getElementById(videoId);
+            var button = iframe.parentNode.querySelector('.play-button');
+            button.style.display = 'none';
+            iframe.style.display = 'block';
+            var src = iframe.src;
+            iframe.src = src +  "&autoplay=1"; // This will add autoplay parameter to the iframe src
+        }
+
+        function changeVideoQuality(quality) {
+            var iframe = document.getElementById('video1');
+            var src = iframe.src;
+            var newSrc = src.replace(/\/b\?r=/, `/${quality}?r=`);
+            iframe.src = newSrc;
+        }
+
+        function searchShows() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var videoItems = document.querySelectorAll('.video-item');
+
+            videoItems.forEach(function(item) {
+                var title = item.querySelector('.video-title').innerText.toLowerCase();
+                if (title.includes(input)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        
     
-    
-</div>
-</main>
+    // JavaScript for back button
+    function goBack() {
+        window.history.back();
+    }
+    </script>
 </body>
 </html>

@@ -1,3 +1,7 @@
+// JavaScript for back button
+function goBack() {
+    window.history.back();
+}
 // Countdown function
 function countdown(endDate, elementId) {
     var countDownDate = new Date(endDate).getTime();
@@ -22,6 +26,5 @@ function countdown(endDate, elementId) {
 }
 
 // Start countdown for each episode
-countdown("June 1, 2024 20:30:00", "countdown1");
-countdown("June 3, 2024 19:00:00", "countdown2");
-countdown("June 3, 2024 20:30:00", "countdown3");
+countdown("June 23, 2024 20:30:00", "countdown1");
+countdown("June 23, 2024 19:00:00", "countdown2");

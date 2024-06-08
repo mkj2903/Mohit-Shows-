@@ -3,60 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baalveer</title>
+    <title>Baalveer S4</title>
     <link rel="stylesheet" href="baalveer.css">
-    <script type='text/javascript' src='//rancidmorsel.com/24/f7/5e/24f75e4d76613263e672f6e1647ca9c4.js'></script>
 </head>
 <body>
     <header>
-        <h1>Baalveer</h1>
+
+    <div class="container">
+        <!-- Back Button -->
+        <button class="back-button" onclick="history.back()">Back</button>
+
+
+        <h2>Baalveer S4</h2>
         <nav>
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="categories.html">Categories</a></li>
-                <li><a href="shows.html">Shows</a></li>
-                <li><a href="bookmarks.html">Bookmarks</a></li>
+                <li><a href="showschannels.html">Show Channels</a></li>
             </ul>
         </nav>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search for movies...">
-            <button id="searchButton">Search</button>
-        </div>
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for shows...">
+                <button onclick="searchShows()">Search</button>
+            </div>
+        </section>
     </header>
     <main>
-        <div id="searchResults"></div>
-        <div class="video-gallery" id="videoGallery">
-            <div class="video-item" id="video1">
-                <iframe id="odysee-iframe" style="width:100%; aspect-ratio:16 / 9;" src="https://odysee.com/$/embed/@mkj2903:1/Baalveer_4_S04_E21_Repairing_The_Bhasm_Shool_720p_SonyLIV_WEB_DL:8?r=6ZnbraDGq9PvJivWzmusCVyWsgjMZD6y" allowfullscreen></iframe>                <div class="video-info">
-                    <h2 class="video-title">Baalveer Ep 21</h2>
-                    <p class="video-date">June 3, 2024</p>
-                    <a href="https://dlupload.com/filedetail/764107215" class="download-button">Download</a>
-                    <button class="bookmark-button" onclick="bookmarkVideo(this)">☆</button>
-                    <div class="like-dislike-container">
-                        <button class="like-button" onclick="likeVideo('video1')">👍 <span id="like-count-video1">0</span></button>
-                        <button class="dislike-button" onclick="dislikeVideo('video1')">👎 <span id="dislike-count-video1">0</span></button>
-                    </div>
-                </div>
-            </div>
+        <div class="video-gallery">
             <!-- Repeat this block for each video -->
-            <div class="video-item" id="video1">
-                <iframe id="odysee-iframe" style="width:100%; aspect-ratio:16 / 9;" src="https://odysee.com/$/embed/@mkj2903:1/baalveer:2?r=6ZnbraDGq9PvJivWzmusCVyWsgjMZD6y" allowfullscreen></iframe>
+            <div class="video-item">
+                <h1 class="video-title">Baalveer EP 1 </h1>
+
+                <div class="video">
+                    <iframe id="video1" style="width:100%; aspect-ratio:16 / 9;" src="https://odysee.com/$/embed/@mkj2903:1/Taarak_Mehta_Ka_Ooltah_Chashmah_Season_41_Episode_4099_Anjali_Ka:b?r=6ZnbraDGq9PvJivWzmusCVyWsgjMZD6y" allowfullscreen></iframe>
+
+                    <button class="play-button" onclick="playVideo('video1')">▶</button>
+                </div>
                 <div class="video-info">
-                    <h2 class="video-title">Baalveer Ep 20</h2>
-                    <p class="video-date">May 31, 2024</p>
-                    <a href="https://dlupload.com/filedetail/712698321" class="download-button">Download</a>
-                    <button class="bookmark-button" onclick="bookmarkVideo(this)">☆</button>
-                    <div class="like-dislike-container">
-                        <button class="like-button" onclick="likeVideo('video1')">👍 <span id="like-count-video1">0</span></button>
-                        <button class="dislike-button" onclick="dislikeVideo('video1')">👎 <span id="dislike-count-video1">0</span></button>
-                    </div>
+                
+                    <a href="javascript:void(0);" onclick="playVideo('video1');" class="download-button">Watch</a>
+
+                    <select id="quality-select" onchange="changeVideoQuality(this.value)">
+                        <option value="" disabled selected >Video Quality</option>
+                        <option  value="low">360p</option>
+                        <option  value="medium">540p</option>
+                        <option  value="high">720p</option>
+                    </select>
+                    <a href="" class="download-button">Download</a>
                 </div>
             </div>
-            <!-- Continue repeating for all videos -->
+            
+            <!-- Repeat the block up to 20 videos -->
         </div>
     </main>
-    <script src="search.js"></script>
+
+    <script>
+        
+        function playVideo(videoId) {
+            var iframe = document.getElementById(videoId);
+            var button = iframe.parentNode.querySelector('.play-button');
+            button.style.display = 'none';
+            iframe.style.display = 'block';
+            var src = iframe.src;
+            iframe.src = src +  "&autoplay=1"; // This will add autoplay parameter to the iframe src
+        }
+
+        function changeVideoQuality(quality) {
+            var iframe = document.getElementById('video1');
+            var src = iframe.src;
+            var newSrc = src.replace(/\/b\?r=/, `/${quality}?r=`);
+            iframe.src = newSrc;
+        }
+
+        function searchShows() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var videoItems = document.querySelectorAll('.video-item');
+
+            videoItems.forEach(function(item) {
+                var title = item.querySelector('.video-title').innerText.toLowerCase();
+                if (title.includes(input)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        
+    
+    // JavaScript for back button
+    function goBack() {
+        window.history.back();
+    }
+    </script>
 </body>
 </html>

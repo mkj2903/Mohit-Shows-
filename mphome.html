@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motu Patlu Home Page</title>
+    <link rel="stylesheet" href="mphome.css">
+</head>
+<body>
+    <nav>
+        <button class="back-button" onclick="history.back()">Back</button>
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cartoonchannel.html">Cartoons</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            
+        </ul>
+    </nav>
+
+
+    <div class="image-gallery">
+        <!-- Repeat this div for each image -->
+        <div class="image-item">
+            <a href="motupatluep.html">
+                <img src="Images/Season.png" alt="Image">
+                <div class="image-info">
+                    <h2 class="image-title">Motu Patlu New Episodes 2024</h2>
+                    <p class="image-subtitle">Season 15</p>
+                </div>
+            </a>
+        </div>
+        <div class="image-item">
+            <a href="mpmovies.html">
+            <img src="Images/mpmovies.png" alt="Image">
+            <div class="image-info">
+                <h2 class="image-title">Motu Patlu All New Movies</h2>
+                <p class="image-subtitle">2020-2024</p></a>
+            </div>
+        </div>
+        <!-- Repeat ends here -->
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('show');
+        }
+        // JavaScript for back button
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
